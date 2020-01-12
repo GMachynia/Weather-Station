@@ -1,0 +1,123 @@
+body {
+  font-family: Helvetica; 
+}
+
+.temperature {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+  .glass {
+    background: #e5e5e5;
+    border-radius: 100px 100px 0 0;
+    display: block;
+    height: 100px;
+    margin: 0 35px 10px;
+    padding: 5px;
+    position: relative;
+    width: 20px;
+  }
+  .amount {
+    background: #f34e54;
+    border-radius: 100px;
+    display: block;
+    width: 20px;
+    position: absolute;
+     bottom: 5px;
+  }
+  strong { display: block; text-align: center; }
+  .totalT {
+    font-size: 16px;
+    position: relative;
+    right: 80px;
+    top: 95px;
+  }
+  .totalR {
+    font-size: 16px;
+    position: relative;
+    right: 80px;
+    top: 30px;
+  }
+
+.bulb {
+  background: #e5e5e5;
+  border-radius: 100px;
+  display: block;
+  height: 50px;
+  margin: 0 35px 10px;
+  padding: 5px;
+  position: relative;
+    top: -20px;
+    right: 15px;
+  width: 50px;
+}
+  .red-circle {
+    background: #f34e54;
+    border-radius: 100px;
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
+  .filler {
+    background: #f34e54;
+    border-radius: 100px 100px 0 0;
+    display: block;
+    height: 30px;
+    width: 20px;
+    position: relative;
+      top: -65px;
+      right: -15px;
+    z-index: 30;
+  }
+  .circles {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 100px;
+   
+  }
+    .shape1 {
+ 
+      background: #e5e5e5;
+      border-radius: 100px;
+      display: block;
+      height: 50px;
+      margin: 0 35px 10px;
+      padding: 5px;
+      position: relative;
+        top: -20px;
+        right: 15px;
+      width: 50px;
+    }
+      .shape2 {
+        background: #3399FF;
+        border-radius: 100px 100px 100px 100px;
+        display: block;
+        height: 50px;
+        width: 50px;
+      }
+      .shape3 {
+        background: #e5e5e5;
+        border-radius: 100px 100px 50px 50px;
+        display: block;
+        width: 50px;
+        position: relative;
+        top: -50px;
+        right: 0px;
+        z-index: 10;
+      }
+
+.measurements {
+    width:70%; 
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-size: xx-large;
+}
+
+

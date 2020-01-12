@@ -1,0 +1,79 @@
+
+
+
+<div class="row col-12 text-center m-auto w-100" >
+
+  <mat-form-field class="m-4">
+    <input  [(ngModel)]="DateFrom"  (ngModelChange)="DateFromChange($event)"  placeholder="Choose a date from... " matInput [matDatepicker]="myDatePickerFrom">
+    <mat-datepicker-toggle [for]="myDatePickerFrom" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #myDatePickerFrom > </mat-datepicker>
+  </mat-form-field>
+  <mat-form-field class="m-4">
+    <input [(ngModel)]="DateTo" (ngModelChange)="DateToChange($event)"  matInput [matDatepicker]="myDatePickerTo"   placeholder="Choose a date to... ">
+    <mat-datepicker-toggle [for]="myDatePickerTo" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #myDatePickerTo > </mat-datepicker>
+  </mat-form-field>
+</div>
+
+
+<div class="example-button-row ">
+  <button mat-stroked-button color="primary" class="m-1 d-inline-block ml-3 mb-4" (click)="ShowHistory()"> Get History </button>
+  <button mat-stroked-button color="primary" class="m-1 d-inline-block mb-4" (click)="HideHistory()"> Hide History </button>
+</div>
+
+
+
+
+<div *ngIf="showHistory" class="history-list" class="col-12 mb-4" >
+   
+  <table mat-table  matSort style="width: 100%" [dataSource]="dataSource" class="mat-elevation-z8">
+    
+    <ng-container matColumnDef="id" class="m-4">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="temperature" class="m-4">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Temperature </th>
+      <td mat-cell *matCellDef="let element"> {{element.temperature}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="moisture" class="m-4">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Moisture </th>
+      <td mat-cell *matCellDef="let element"> {{element.moisture}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="altitude" class="m-4">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Altitude </th>
+      <td mat-cell *matCellDef="let element"> {{element.altitude}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="pressure" class="m-4">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Pressure </th>
+      <td mat-cell *matCellDef="let element"> {{element.pressure}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateTime" class="m-4">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> DateTime </th>
+      <td mat-cell *matCellDef="let element"> {{element.dateTime}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+
+<div class="row col-12 w-90 m-auto" >
+  <div  class="chart50">
+    <canvas id="lineChart1" class="w-100 m-auto "></canvas>
+  </div>
+  <div class="chart50"  >
+    <canvas id="lineChart2" class="w-100 m-auto "></canvas>
+  </div>
+  <div class="chart50" >
+    <canvas id="lineChart3"class="w-100 m-auto " ></canvas>
+  </div>
+</div>
+ 

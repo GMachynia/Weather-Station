@@ -1,0 +1,43 @@
+<div class="coordinates m-2"><h3>{{Coordinates}}</h3></div>
+<section class="section">      
+        <div class="measurements">
+                <div class="temperature">
+                        <strong class="totalT" style="bottom: 20%">Temperature {{Temperature | number : '1.2-2'}} °C</strong>
+                        <span class="glass">                           
+                            <span class="amount" [style.height.%]="Temperature/80*100"></span>
+                        </span>
+                        <div class="bulb">
+                            <span class="red-circle"></span>
+                            <span class="filler">
+                                <span></span>
+                            </span>
+                        </div>
+                      </div>
+                      <div class="circles">
+                            <strong class="totalR" >Humadity {{Humadity | number : '1.2-2'}} %</strong>
+                            <div class="shape1">                           
+                                    <span class="shape2" ></span>                                   
+                                    <span class="shape3" [style.height.px]="50-Humadity/2"></span>                                                                       
+                                </div>
+                          </div>
+                          <div class="circles">
+                                <strong class="totalR" >Pressure {{Pressure | number : '1.2-2'}} hPa</strong>
+                                <div class="shape1">                            
+                                        <span class="shape2" style="background: rgb(5, 145, 63);" ></span>                                   
+                                        <span class="shape3" style="background: #e5e5e5;" [style.height.px]="50-(Pressure/20-5)"></span>                                                     
+                                    </div>
+                              </div>
+                              <div class="circles">
+                            <strong class="totalR" >Altitude {{Altitude | number : '1.2-2'}} m a.s.l </strong>
+                            <div class="shape1">                       
+                                    <span class="shape2" style="background: rgb(81, 83, 82);" ></span>                                   
+                                    <span class="shape3" style="background: #e5e5e5;" [style.height.px]="50-Altitude/20"></span>                                 
+                                </div>
+                          </div>
+            </div>
+                   
+</section>
+
+
+
+
